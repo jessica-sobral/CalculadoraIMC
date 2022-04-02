@@ -39,6 +39,22 @@ namespace CalculadoraIMC
             
             else if(imc >= 40)
                 Console.WriteLine("Você está com obesidade grau III ou mórbida");
+            
+            double pesoNormal = 0.0;
+
+            if(imc <= 18.5)
+            {
+                pesoNormal = 18.50 * altura * altura;
+                double pesoGanhar = pesoNormal - peso;
+                Console.WriteLine("Para alcançar seu peso normal o ideal é ganhar {0} Kg", pesoGanhar);
+            }
+            
+            else if(imc >= 24.9)
+            {
+                pesoNormal = 24.9 * altura * altura;
+                double pesoPerder = peso + pesoNormal;
+                Console.WriteLine("Para alcançar seu peso normal o ideal é perder {0} Kg", pesoPerder);
+            }
         }
     }
 }
