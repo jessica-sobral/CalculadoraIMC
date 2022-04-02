@@ -52,7 +52,7 @@ namespace CalculadoraIMC
             else if(imc >= 24.9)
             {
                 pesoNormal = 24.9 * altura * altura;
-                double pesoPerder = peso + pesoNormal;
+                double pesoPerder = peso - pesoNormal;
                 Console.WriteLine("Para alcançar seu peso normal o ideal é perder {0} Kg", pesoPerder);
             }
         }
