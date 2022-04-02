@@ -11,6 +11,7 @@ Aplicação console para cálculo do IMC.
 ## Tecnologias utilizadas
 
 - dotnet 2.1
+- dotnet 6.0
 
 ## Como executar
 
