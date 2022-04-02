@@ -20,7 +20,7 @@ namespace CalculadoraIMC
             Console.WriteLine(
                 "{0} sua altura é {1} e seu peso é {2}", nome, altura, peso
             );
-            Console.WriteLine("Seu IMC é {0}", imc);
+            Console.WriteLine("Seu IMC é {0}", Math.Round(imc, 2));
 
             if(imc < 18.5)
                 Console.WriteLine("Você está abaixo do peso");
@@ -46,14 +46,14 @@ namespace CalculadoraIMC
             {
                 pesoNormal = 18.50 * altura * altura;
                 double pesoGanhar = pesoNormal - peso;
-                Console.WriteLine("Para alcançar seu peso normal o ideal é ganhar {0} Kg", pesoGanhar);
+                Console.WriteLine("Para alcançar seu peso normal o ideal é ganhar {0} Kg", Math.Round(pesoGanhar, 3));
             }
             
             else if(imc >= 24.9)
             {
                 pesoNormal = 24.9 * altura * altura;
                 double pesoPerder = peso - pesoNormal;
-                Console.WriteLine("Para alcançar seu peso normal o ideal é perder {0} Kg", pesoPerder);
+                Console.WriteLine("Para alcançar seu peso normal o ideal é perder {0} Kg", Math.Round(pesoPerder, 3));
             }
         }
     }
