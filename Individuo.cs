@@ -10,11 +10,6 @@ public class Individuo
         Altura = altura;
         Peso = peso;
     }
-
-    public String toString(double imc)
-    {
-        return Nome + " sua altura é " + Math.Round(Altura, 2) + " e seu peso é " + Math.Round(Peso, 2) + ". \nSeu IMC é " + Math.Round(imc, 2) + ".";
-    }
     
     public String ClassificacaoImc()
     {
