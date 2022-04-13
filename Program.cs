@@ -8,8 +8,8 @@ Console.WriteLine("Qual o seu peso em Kg? (ex.: 69,2)");
 float peso = Convert.ToSingle(Console.ReadLine());
 
 Individuo i = new Individuo(nome, altura, peso);
-double imc = i.CalculoImc(altura, peso);
+i.Imc();
 
-Console.WriteLine(i.toString(imc));
-Console.WriteLine(i.ClassificacaoImc(imc));
-Console.WriteLine(i.PesoNormal(altura, peso, imc));
+Console.WriteLine("{0} sua altura é {1} e seu peso é {2}. Seu IMC é {3}.", Math.Round(altura, 2), Math.Round(peso, 2), Math.Round(i.Imc, 2));
+Console.WriteLine(i.ClassificacaoImc());
+Console.WriteLine(i.PesoNormal(altura, peso));
