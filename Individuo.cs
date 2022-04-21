@@ -4,6 +4,7 @@ public class Individuo
     public double Altura { get; set; }
     public double Peso { get; set; }
     public double Imc { get => Peso / (Altura * Altura); }
+
     public Individuo(String nome, double altura, double peso)
     {
         Nome = nome;
@@ -43,7 +44,7 @@ public class Individuo
             pesoNormal = 18.50 * altura * altura;
             double pesoGanhar = pesoNormal - peso;
 
-            return "Para alcançar seu peso ideal, o ideal é ganhar " + Math.Round(pesoGanhar, 3) + " Kg.";
+            return "Para alcançar seu peso normal, o ideal é ganhar " + Math.Round(pesoGanhar, 3) + " Kg.";
             //return "Para alcançar seu peso normal o ideal é ganhar {0} Kg", Math.Round(pesoGanhar, 3);
         }
     
@@ -52,7 +53,7 @@ public class Individuo
             pesoNormal = 24.9 * altura * altura;
             double pesoPerder = peso - pesoNormal;
 
-            return "Para alcançar seu peso ideal, o ideal é perder " +  Math.Round(pesoPerder, 3) + " Kg.";
+            return "Para alcançar seu peso normal, o ideal é perder " +  Math.Round(pesoPerder, 3) + " Kg.";
             //return "Para alcançar seu peso normal o ideal é perder {0} Kg", Math.Round(pesoPerder, 3);
         }
 
